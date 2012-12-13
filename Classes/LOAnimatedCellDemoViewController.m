@@ -109,6 +109,9 @@
 	NSNumber *selectedIndex = [NSNumber numberWithBool:isSelected];
 	[selectedIndexes setObject:selectedIndex forKey:indexPath];	
 		
+    [demoTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    
 	// This is where magic happens...
 	[demoTableView beginUpdates];
 	[demoTableView endUpdates];
