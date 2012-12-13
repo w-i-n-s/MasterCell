@@ -15,6 +15,7 @@
 		28D7ACF80DDB3853001CB0EB /* LOAnimatedCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* LOAnimatedCellDemoViewController.m */; };
 		2A395AD11679E8B5007C40E4 /* MasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A395AD01679E8B5007C40E4 /* MasterCell.m */; };
 		2A395AD41679E8D5007C40E4 /* MasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A395AD31679E8D5007C40E4 /* MasterCell.xib */; };
+		2AD25CFF167A3F310081F454 /* EditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD25CFE167A3F310081F454 /* EditCell.xib */; };
 		C7918059138AE8FD00BADD28 /* AnimatedCellDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7918057138AE8FD00BADD28 /* AnimatedCellDemoView.xib */; };
 		C791805A138AE8FD00BADD28 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7918058138AE8FD00BADD28 /* MainWindow.xib */; };
 		C79180A7138AEE8A00BADD28 /* Button_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = C79180A6138AEE8A00BADD28 /* Button_Green.png */; };
@@ -36,6 +37,7 @@
 		2A395ACF1679E8B5007C40E4 /* MasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterCell.h; sourceTree = "<group>"; };
 		2A395AD01679E8B5007C40E4 /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
 		2A395AD31679E8D5007C40E4 /* MasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterCell.xib; sourceTree = "<group>"; };
+		2AD25CFE167A3F310081F454 /* EditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCell.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* AnimatedTableViewCell_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTableViewCell_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AnimatedTableViewCell-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnimatedTableViewCell-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C7918057138AE8FD00BADD28 /* AnimatedCellDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatedCellDemoView.xib; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				28D7ACF60DDB3853001CB0EB /* LOAnimatedCellDemoViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* LOAnimatedCellDemoViewController.m */,
 				2A395AD31679E8D5007C40E4 /* MasterCell.xib */,
+				2AD25CFE167A3F310081F454 /* EditCell.xib */,
 				2A395ACF1679E8B5007C40E4 /* MasterCell.h */,
 				2A395AD01679E8B5007C40E4 /* MasterCell.m */,
 			);
@@ -223,6 +226,7 @@
 				C7918135138AFD3400BADD28 /* AppIcon.png in Resources */,
 				C7918136138AFD3400BADD28 /* Default.png in Resources */,
 				2A395AD41679E8D5007C40E4 /* MasterCell.xib in Resources */,
+				2AD25CFF167A3F310081F454 /* EditCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

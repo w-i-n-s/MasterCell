@@ -27,6 +27,12 @@
 	[super viewDidLoad];
 	
 	selectedIndexes = [[NSMutableDictionary alloc] init];
+    
+    [demoTableView registerNib:[UINib nibWithNibName:@"MasterCell" bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:CELL_IDENT_ORDINARY ];
+    
+    [demoTableView registerNib:[UINib nibWithNibName:@"EditCell" bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:CELL_IDENT_EDIT ];
 }
 
 - (void)viewDidUnload {
@@ -67,7 +73,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    //static NSString *CellIdentifier = @"Cell";
     NSString *CellIdentifier;
     
     if ([self cellIsSelected:indexPath])
@@ -75,22 +80,18 @@
     else
         CellIdentifier = CELL_IDENT_ORDINARY;
     
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	if (cell == nil) {
-        /*
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		[cell.textLabel setText:[NSString stringWithFormat:@"Ooooh click me please! %d",[indexPath row]]];
-		[cell.textLabel setTextAlignment:UITextAlignmentCenter];
-         */
         
-        cell = [[[MasterCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"OMG"] autorelease];
+		[cell.textLabel setText:[NSString stringWithFormat:@"Ooooh click me please! %d",[indexPath row]]];
+        
     }
     
-    [self configureCell:(MasterCell*)cell
-            atIndexPath:indexPath];
+    if(![[cell valueForKey:@"reuseIdentifier"] isEqualToString:@"OMG"])
+        [self configureCell:(MasterCell*)cell
+                atIndexPath:indexPath];
     
     return cell;
 }
@@ -111,6 +112,8 @@
 		
     [demoTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:UITableViewRowAnimationFade];
+    
+    [[(MasterCell*)[tableView cellForRowAtIndexPath:indexPath] textView] resignFirstResponder];
     
 	// This is where magic happens...
 	[demoTableView beginUpdates];

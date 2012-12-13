@@ -15,16 +15,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
 
-        NSArray *nibContents = [[NSBundle mainBundle] loadNibNamed:@"MasterCell"
-                                                             owner:self
-                                                           options:nil];
-
-        for (MasterCell *aCell in nibContents)
-            if ([[aCell valueForKey:@"reuseIdentifier"] isEqual:reuseIdentifier]) {
-                
-                self = aCell;
-                break;
-            }
     }
     return self;
 }
@@ -34,6 +24,7 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
 }
 
 - (void)dealloc {
