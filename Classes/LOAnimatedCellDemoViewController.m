@@ -85,8 +85,8 @@
 		[cell.textLabel setTextAlignment:UITextAlignmentCenter];
          */
         
-        cell = [[MasterCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                 reuseIdentifier:CellIdentifier];
+        cell = [[[MasterCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                 reuseIdentifier:CellIdentifier] autorelease];
     }
     
     [self configureCell:(MasterCell*)cell
