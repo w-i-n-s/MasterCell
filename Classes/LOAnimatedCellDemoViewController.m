@@ -15,6 +15,9 @@
 #define CELL_HEIGHT_ORDINARY    70
 #define CELL_HEIGHT_EDIT        110
 
+#define HTML_STRING         @"<head><body style=”background-color:transparent”><head><body>\
+<i>this is very</i><b> very</b> <span style = \"font-size:120%%\">interesting text</span><br>row number: <b>%d</b></body>"
+
 @interface LOAnimatedCellDemoViewController (private)
 
 - (BOOL)cellIsSelected:(NSIndexPath *)indexPath;
@@ -68,6 +71,14 @@
     
     [[cell mainLabel] setText:([self cellIsSelected:indexPath])?@"Master":@"Edited" ];
     [[cell numberLabel] setText:[NSString stringWithFormat:@"%d.",[indexPath row]]];
+    
+    UIWebView *webView = (UIWebView*)[cell viewWithTag:101];
+    if (webView) {
+        NSLog(@"");
+        
+        [webView loadHTMLString: [NSString stringWithFormat:HTML_STRING,[indexPath row]]
+                        baseURL:nil];
+    }
     
 }
 

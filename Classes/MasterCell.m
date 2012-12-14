@@ -31,6 +31,7 @@
     [_mainLabel release];
     [_numberLabel release];
     [_textView release];
+    [_webView release];
     [super dealloc];
 }
 @end

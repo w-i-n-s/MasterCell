@@ -12,5 +12,6 @@
 @property (retain, nonatomic) IBOutlet UILabel *mainLabel;
 @property (retain, nonatomic) IBOutlet UILabel *numberLabel;
 @property (retain, nonatomic) IBOutlet UITextView *textView;
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
 
 @end
